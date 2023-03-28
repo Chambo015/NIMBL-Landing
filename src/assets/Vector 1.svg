@@ -1,7 +1,16 @@
 <svg width="930" height="767" viewBox="0 0 930 767" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0.5H227.543C230.51 0.5 233.307 1.88658 235.104 4.24831L252.351 26.9207C254.336 29.531 257.428 31.0636 260.707 31.0636H920C925.247 31.0636 929.5 35.3169 929.5 40.5636V757C929.5 762.247 925.247 766.5 920 766.5H702.311C699.422 766.5 696.691 765.186 694.888 762.929L677.643 741.339C675.651 738.844 672.632 737.392 669.439 737.392H10C4.7533 737.392 0.5 733.139 0.5 727.892V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke="url(#paint0_linear_264_240)" stroke-opacity="0.56"/>
+<g filter="url(#filter0_b_169_3666)">
+<path d="M227.543 0H10C4.47715 0 0 4.47716 0 10V727.892C0 733.415 4.47716 737.892 10 737.892H669.439C672.48 737.892 675.355 739.275 677.253 741.651L694.497 763.241C696.395 765.617 699.27 767 702.311 767H920C925.523 767 930 762.523 930 757V40.5636C930 35.0407 925.523 30.5636 920 30.5636H260.707C257.584 30.5636 254.64 29.104 252.749 26.618L235.501 3.94559C233.61 1.45956 230.666 0 227.543 0Z" fill="white" fill-opacity="0.05"/>
+<path d="M10 0.5H227.543C230.51 0.5 233.307 1.88658 235.104 4.24831L252.351 26.9207C254.336 29.531 257.428 31.0636 260.707 31.0636H920C925.247 31.0636 929.5 35.3169 929.5 40.5636V757C929.5 762.247 925.247 766.5 920 766.5H702.311C699.422 766.5 696.691 765.186 694.888 762.929L677.643 741.339C675.651 738.844 672.632 737.392 669.439 737.392H10C4.7533 737.392 0.5 733.139 0.5 727.892V10C0.5 4.7533 4.7533 0.5 10 0.5Z" stroke="url(#paint0_linear_169_3666)" stroke-opacity="0.56"/>
+</g>
 <defs>
-<linearGradient id="paint0_linear_264_240" x1="888.535" y1="-6.825e-05" x2="-106.709" y2="459.651" gradientUnits="userSpaceOnUse">
+<filter id="filter0_b_169_3666" x="-93" y="-93" width="1116" height="953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="46.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_169_3666"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_169_3666" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_169_3666" x1="888.535" y1="-6.825e-05" x2="-106.709" y2="459.651" gradientUnits="userSpaceOnUse">
 <stop stop-color="#B8B8B8"/>
 <stop offset="0.567708" stop-color="white" stop-opacity="0"/>
 <stop offset="1" stop-color="#A6A6A6"/>
