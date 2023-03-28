@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheInfiniteTicker from './TheInfiniteTicker.vue';
+
+</script>
 
 <template>
-  <section class="min-h-screen relative hero pt-[170px]">
+  <section class="min-h-screen relative hero pt-[170px] overflow-hidden">
     <div class="container">
       <h1 class="font-['Rollbox'] font-extrabold uppercase text-6xl text-center leading-tight mb-7">
         <span class="bg-hero-text-gradient bg-clip-text text-transparent">DECENTRALIZED</span>
@@ -28,6 +31,7 @@
         </div>
       </div>
     </div>
+    <TheInfiniteTicker bg-color="#202020" text="video • blockchain • nft • ai • web3 • stream • community • challenges • education •"/>
   </section>
   <svg width="0" height="0">
     <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
