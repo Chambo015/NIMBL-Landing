@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconBgHexagon from './Icons/IconBgHexagon.vue';
+import IconClock from './Icons/IconClock.vue';
+import IconDrop from './Icons/IconDrop.vue';
+import IconNetwork from './Icons/IconNetwork.vue';
+import IconStackCoins from './Icons/IconStackCoins.vue'
+
+</script>
 
 <template>
   <section
@@ -6,9 +13,52 @@
   >
     <div class="container flex justify-end">
       <div
-        class="w-[930px] h-[767px] z-40 flex justify-center items-center relative bg-white/5 backdrop-blur-md"
+        class="w-[930px] h-[767px] z-40 flex flex-col px-[80px] justify-center relative bg-white/5 backdrop-blur-md"
         style="clip-path: url(#era)"
       >
+        <h2 class="font-['Rollbox'] text-5xl font-extrabold mb-12"><span class="bg-hero-text-gradient bg-clip-text text-transparent">ABOUT</span> COLLECTION</h2>
+        <div>
+            <div class="flex py-5 border-b border-[#b8b8b826]">
+                <div class="flex-grow max-w-[50%] flex gap-5 items-center">
+                    <IconBgHexagon>
+                        <IconDrop />
+                    </IconBgHexagon>
+                    <span class="text-2xl leading-none">Supply: 3600</span>
+                </div>
+                <div class="flex-grow max-w-[50%] flex gap-5 items-center">
+                    <IconBgHexagon>
+                        <IconNetwork />
+                    </IconBgHexagon>
+                    <span class="text-2xl leading-none">Network: ETH MAINNET</span>
+                </div>
+            </div>
+            <div class="flex py-5 border-b border-[#b8b8b826]">
+                <div class="flex-grow max-w-[50%] flex gap-5 items-center">
+                    <IconBgHexagon>
+                        <IconStackCoins />
+                    </IconBgHexagon>
+                    <span class="text-2xl leading-none">Public: 0.12 ETH</span>
+                </div>
+                <div class="flex-grow max-w-[50%] flex gap-5 items-center">
+                    <IconBgHexagon>
+                        <IconDrop />
+                    </IconBgHexagon>
+                    <span class="text-2xl leading-none">Private sale: 0.06 ETH</span>
+                </div>
+            </div>
+            <div class="flex py-5">
+                <div class="flex-grow flex gap-5 items-center">
+                    <IconBgHexagon>
+                        <IconClock />
+                    </IconBgHexagon>
+                    <span class="text-2xl leading-none">Mint date: 4th May, 2023</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-16 mt-10">
+            <button class="bg-btn-bg bg-clip-border border-transparent text-3xl py-4 px-9">Participate in WL raffle</button>
+            <button class="border text-3xl py-4 px-9">Get notified</button>
+        </div>
         <svg
           width="930"
           height="767"
@@ -42,6 +92,7 @@
       </div>
     </div>
   </section>
+  <!-- ClipPath svg -->
   <svg width="0"  height="0" viewBox="0 0 930 767">
     <clipPath id="era">
       <path
@@ -53,6 +104,7 @@
       />
     </clipPath>
   </svg>
+  <!--  -->
 </template>
 
 <style scoped></style>
