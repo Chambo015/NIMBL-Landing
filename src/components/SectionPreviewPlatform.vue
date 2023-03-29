@@ -3,12 +3,12 @@
 </script>
 
 <template>
-    <section class="overflow-hidden min-h-screen relative flex items-end">
-        <div class="container pt-10">
-            <div class=" isolate z-10 relative w-full before:block before:pt-[calc(100%/1.78)] monitor_screen">
+    <section class="overflow-hidden min-h-screen relative flex items-end pt-40">
+        <div class="container">
+            <div class=" isolate z-10 relative w-[90%] mx-auto before:block before:pt-[calc(100%/1.78)] monitor_screen">
                 <div class="bg-[url('/monitor.png')] absolute inset-0 w-full h-full bg-no-repeat bg-[length:100%_auto] "></div>
             </div>
-            <div class="bg-[url('/podium.png')] w-full before:block before:pt-[calc(100%/9.72)] mix-blend-screen bg-no-repeat bg-[length:100%_auto] -mt-1"></div>
+            <div class="bg-[url('/podium.png')] w-[90%] mx-auto before:block before:pt-[calc(100%/9.72)] mix-blend-screen bg-no-repeat bg-[length:100%_auto] -mt-1"></div>
         </div>
     </section>
 </template>

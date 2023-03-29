@@ -23,7 +23,7 @@ import TheInfiniteTicker from './TheInfiniteTicker.vue';
     >
       <div
         style="clip-path: url(#my-clip-path)"
-        class="w-[997px] h-[206px] z-40 bg-white/5 backdrop-blur-2xl flex justify-center items-center"
+        class="w-[997px] h-[206px] z-40 bg-white/5 backdrop-blur-2xl flex justify-center items-center rounded-t-[10px_20px] "
       >
         <div class="flex gap-16">
             <button class="bg-btn-bg bg-clip-border border-transparent text-3xl py-4 px-9 min-w-[329px]">Go to prototype</button>
