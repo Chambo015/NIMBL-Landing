@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SectionAIUseCase from './components/SectionAIUseCase.vue';
 import SectionAboutCollection from './components/SectionAboutCollection.vue';
 import SectionHeader from './components/SectionHeader.vue';
 import SectionHero from './components/SectionHero.vue';
@@ -13,6 +14,7 @@ import SectionPreviewPlatform from './components/SectionPreviewPlatform.vue';
     <SectionPreviewPlatform />
     <SectionNFTCollection />
     <SectionAboutCollection />
+    <SectionAIUseCase />
 </template>
 
 <style scoped>

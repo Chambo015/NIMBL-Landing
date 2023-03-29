@@ -65,3 +65,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'TT Octosquares';
+    src: url('TTOctosquares-Bold.eot');
+    src: local('TT Octosquares Bold'), local('TTOctosquares-Bold'),
+        url('TTOctosquares-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TTOctosquares-Bold.woff2') format('woff2'),
+        url('TTOctosquares-Bold.woff') format('woff'),
+        url('TTOctosquares-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: url('TTOctosquares-XBold.eot');
+    src: local('TT Octosquares ExtraBold'), local('TTOctosquares-XBold'),
+        url('TTOctosquares-XBold.eot?#iefix') format('embedded-opentype'),
+        url('TTOctosquares-XBold.woff2') format('woff2'),
+        url('TTOctosquares-XBold.woff') format('woff'),
+        url('TTOctosquares-XBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
