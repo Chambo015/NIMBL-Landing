@@ -1,11 +1,37 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
+
+
 import TheInfiniteTicker from './TheInfiniteTicker.vue';
+
+const container =  ref<HTMLElement | null>(null);
+const heroImage =  ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  if(container.value)
+  gsap.from(container.value?.children, {
+    delay: 0.5,
+    duration: 1,
+    y: 100,
+    autoAlpha: 0,
+    ease: 'back.out(1.7)',
+    stagger: 0.5
+  });
+
+  gsap.from(heroImage.value, {
+    delay: 1.5,
+    duration: 1,
+    y: 200,
+    autoAlpha: 0
+  });
+})
 
 </script>
 
 <template>
   <section class="min-h-screen relative hero pt-[170px] overflow-hidden">
-    <div class="container">
+    <div ref="container" class="container">
       <h1 class="font-['Rollbox'] font-extrabold uppercase text-6xl text-center leading-tight mb-7">
         <span class="bg-hero-text-gradient bg-clip-text text-transparent">DECENTRALIZED</span>
         SOCIAL PLATFORM POWERED BY
@@ -18,7 +44,7 @@ import TheInfiniteTicker from './TheInfiniteTicker.vue';
         lacinia.
       </p>
     </div>
-    <div
+    <div ref="heroImage"
       class="bg-[url('/hero.png')] bg-no-repeat bg-[length:100%_auto] bg-center w-full h-[41vw] flex justify-center items-center"
     >
       <div
