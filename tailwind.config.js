@@ -10,7 +10,9 @@ module.exports = {
       backgroundImage: {
         "btn-bg": "linear-gradient(90.35deg, rgba(155, 28, 191, 0.576) -17.11%, rgba(54, 114, 254, 0.8) 55.15%, rgba(3, 231, 243, 0.8) 120.33%)",
         "hero-text-gradient": "linear-gradient(90.54deg, rgba(155, 28, 191, 0.77) -4.44%, #3672FE 24.41%, #03E7F3 52.32%)"
-
+      },
+      spacing: {
+        'index': 'calc(1vh + 1vw)'
       }
     },
     container: {

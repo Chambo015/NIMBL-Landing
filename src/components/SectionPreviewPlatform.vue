@@ -3,12 +3,12 @@
 </script>
 
 <template>
-    <section class="overflow-hidden min-h-screen relative flex items-end pt-40">
-        <div class="container">
+    <section class="overflow-hidden min-h-screen relative flex items-end py-[calc(theme(spacing.index)*4.5)]">
+        <div class="container monitor_container">
             <div class=" isolate z-10 relative w-[90%] 2xl:w-[100%] mx-auto before:block before:pt-[calc(100%/1.78)] monitor_screen">
                 <div class="bg-[url('/monitor.png')] absolute inset-0 w-full h-full bg-no-repeat bg-[length:100%_auto] "></div>
             </div>
-            <div class="bg-[url('/podium.png')] w-[90%] 2xl:w-[100%] mx-auto before:block before:pt-[calc(100%/9.72)] mix-blend-screen bg-no-repeat bg-[length:100%_auto] -mt-1"></div>
+            <div class="bg-[url('/podium.png')] w-[90%] 2xl:w-[100%] mx-auto before:block before:pt-[calc(100%/9.72)] mix-blend-screen bg-no-repeat bg-[length:100%_auto] relative -mt-1"></div>
         </div>
     </section>
 </template>
@@ -29,6 +29,18 @@
         filter: blur(300px);
         z-index: -1;
         border-radius: 50%;
+    }
+}
+section {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        background: linear-gradient(0deg, rgb(17,17,17) 0%,rgb(17,17,17) 25%, rgba(17, 17, 17, .5) 57%, rgba(17, 17, 17, 0) 100%);
+        z-index: 9999;
     }
 }
 </style>

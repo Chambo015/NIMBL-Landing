@@ -5,7 +5,7 @@ import AppGridCard from './AppGridCard.vue';
 </script>
 
 <template>
-    <section class="min-h-screen flex items-center py-20">
+    <section class="min-h-screen flex items-center py-[calc(theme(spacing.index)*4)]">
         <div class="container">
             <h2 class="mb-20 font-['Rollbox'] text-5xl font-extrabold"><span class="bg-hero-text-gradient bg-clip-text text-transparent">AI</span> USE-CASES</h2>
             <div class="grid grid-cols-10 gap-5 auto-rows-[470px]">
