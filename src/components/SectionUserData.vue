@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import groupSvg from '@/assets/group-locks.svg'
-import { onMounted, ref } from 'vue'
-import gsap from 'gsap'
 
-const UserRef = ref<HTMLElement | null>(null)
-const ZKRef = ref<HTMLElement | null>(null)
-
-onMounted(() => {
-
-    const timeline = gsap.timeline()
-    timeline.to(path.value, { duration: 1, strokeDashoffset: 0 })
-})
 </script>
 
 <template>
@@ -21,7 +11,7 @@ onMounted(() => {
                 USER DATA ON NIMBL
             </h2>
             <div class="flex items-center justify-center gap-4 isolate mb-16">
-                <div ref="UserRef" class="relative mr-auto aside_section">
+                <div  class="relative mr-auto aside_section">
                     <img
                         src="/user-placeholder.png"
                         alt="user"
@@ -42,7 +32,7 @@ onMounted(() => {
                         d="M0.939346 38.9393C0.353546 39.5251 0.353546 40.4749 0.939346 41.0607L10.4853 50.6066C11.0711 51.1924 12.0208 51.1924 12.6066 50.6066C13.1924 50.0208 13.1924 49.0711 12.6066 48.4853L4.12132 40L12.6066 31.5147C13.1924 30.9289 13.1924 29.9792 12.6066 29.3934C12.0208 28.8076 11.0711 28.8076 10.4853 29.3934L0.939346 38.9393ZM222 38.5L2 38.5V41.5L222 41.5V38.5Z"
                         fill="white" />
                 </svg>
-                <img ref="ZKRef" :src="groupSvg" class="w-[370px] h-[400px] object-cover" />
+                <img :src="groupSvg" class="w-[370px] h-[400px] object-cover" />
                 <svg width="219" height="202" viewBox="0 0 219 202" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M218.428 125.53C218.778 124.779 218.453 123.887 217.702 123.537L205.467 117.831C204.716 117.481 203.824 117.806 203.474 118.557C203.124 119.308 203.448 120.2 204.199 120.55L215.075 125.622L210.004 136.497C209.653 137.248 209.978 138.141 210.729 138.491C211.48 138.841 212.372 138.516 212.722 137.765L218.428 125.53ZM10.849 201.55L217.581 126.306L216.555 123.487L9.82291 198.731L10.849 201.55Z"
