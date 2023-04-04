@@ -16,6 +16,7 @@ import SectionUserData from './components/SectionUserData.vue';
     <SectionHeader />
     <SectionHero />
     <SectionPreviewPlatform />
+    <SectionNFTCollection />
     <SectionAIUseCase />
     <SectionUserData />
     <SectionNimblChannels />

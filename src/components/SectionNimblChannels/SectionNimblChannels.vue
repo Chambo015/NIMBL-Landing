@@ -46,8 +46,8 @@ import ChannelToken from './ChannelToken.vue'
             </div>
             <div class="relative mr-10">
                 <ChannelToken class="relative z-40" />
-                <ChannelToken class="!absolute top-0 left-0 z-30 scale-75 translate-x-[45%]" img="/token-bg2.png" />
-                <ChannelToken class="!absolute top-0 left-0 z-20 scale-50 translate-x-[79%]" img="/token-bg3.png" />
+                <ChannelToken class="!absolute top-0 left-0 z-30 scale-75 translate-x-[45%]" img="./token-bg2.png" />
+                <ChannelToken class="!absolute top-0 left-0 z-20 scale-50 translate-x-[79%]" img="./token-bg3.png" />
                 <BlurWindow class="!absolute z-50 top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 ">
                     <div class="p-14">
                         <IconBgHexagon class="!w-[62px] !h-[76px]">

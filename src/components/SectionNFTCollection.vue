@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="min-h-screen bg-[#22202F] overflow-hidden flex flex-col justify-center py-20">
+    <section class="min-h-screen overflow-hidden flex flex-col justify-center py-20">
         <h2 class="font-['Rollbox'] text-7xl container font-extrabold mb-14">NIMBL <span class="bg-hero-text-gradient bg-clip-text text-transparent">NFT COLLECTION</span></h2>
 
         <div class="flex gap-[45px] -translate-x-[176px] mb-[45px]">

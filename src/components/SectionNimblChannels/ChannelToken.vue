@@ -83,7 +83,7 @@
 defineProps({
     img: {
         type: String,
-        default: '/token-bg1.png'
+        default: './token-bg1.png'
     }
 })
 </script>
