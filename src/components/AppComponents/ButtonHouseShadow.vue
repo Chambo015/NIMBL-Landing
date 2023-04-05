@@ -31,7 +31,7 @@ button {
         content: '';
         position: absolute;
         left: 0;
-        background: url('./swords.png') center / 100% 100%;
+        background: url('/swords.png') center / 100% 100%;
         top: 50%;
         width: 150px;
         height: 150px;
@@ -43,7 +43,7 @@ button {
         content: '';
         position: absolute;
         right: 0;
-        background: url('./swords.png') center / 100% 100%;
+        background: url('/swords.png') center / 100% 100%;
         top: 50%;
         width: 150px;
         height: 150px;
