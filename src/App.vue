@@ -1,27 +1,22 @@
 <script setup lang="ts">
-import SectionAIUseCase from './components/SectionAIUseCase.vue';
-import SectionAboutCollection from './components/SectionAboutCollection.vue';
+import SectionAI from './components/SectionAI.vue';
 import SectionCommunities from './components/SectionCommunities.vue';
-import SectionHeader from './components/SectionHeader.vue';
-import SectionHero from './components/SectionHero.vue';
-import { SectionMarketplace } from './components/SectionMarketplace';
-import SectionNFTCollection from './components/SectionNFTCollection.vue';
-import { SectionNimblChannels } from './components/SectionNimblChannels';
-import SectionPreviewPlatform from './components/SectionPreviewPlatform.vue';
-import SectionUserData from './components/SectionUserData.vue';
+import TheHeader from './components/TheHeader.vue';
+import TheHero from './components/SectionHero/TheHero.vue';
+import TheTokenized  from './components/SectionTokenized/TheTokenized.vue';
+import TheInfiniteTicker from './components/TheInfiniteTicker.vue';
+import TheFooter from './components/TheFooter.vue';
 
 </script>
 
 <template>
-    <SectionHeader />
-    <SectionHero />
-    <SectionPreviewPlatform />
-    <SectionNFTCollection />
-    <SectionAIUseCase />
-    <SectionUserData />
-    <SectionNimblChannels />
+    <TheHeader />
+    <TheHero />
+    <TheInfiniteTicker bg-color="#202020" text="video • blockchain • nft • ai • web3 • stream • community • challenges • education •"/>
+    <TheTokenized />
     <SectionCommunities />
-    <SectionMarketplace />
+    <SectionAI />
+    <TheFooter />
 </template>
 
 <style scoped>

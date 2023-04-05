@@ -85,3 +85,15 @@
     font-weight: 800;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: url('TTOctosquares-DBold.eot');
+    src: local('TT Octosquares DemiBold'), local('TTOctosquares-DBold'),
+        url('TTOctosquares-DBold.eot?#iefix') format('embedded-opentype'),
+        url('TTOctosquares-DBold.woff2') format('woff2'),
+        url('TTOctosquares-DBold.woff') format('woff'),
+        url('TTOctosquares-DBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

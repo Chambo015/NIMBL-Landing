@@ -2,9 +2,6 @@
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 
-
-import TheInfiniteTicker from './TheInfiniteTicker.vue';
-
 const container =  ref<HTMLElement | null>(null);
 const heroImage =  ref<HTMLElement | null>(null);
 
@@ -57,7 +54,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <TheInfiniteTicker bg-color="#202020" text="video • blockchain • nft • ai • web3 • stream • community • challenges • education •"/>
+    
   </section>
   <svg width="0" height="0">
     <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
