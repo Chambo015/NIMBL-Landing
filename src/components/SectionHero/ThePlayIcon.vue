@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[126px] h-[126px] aspect-square rounded-full absolute border border-[rgba(184,184,184,0.5)] bg-[rgb(0,0,0,0.15)] backdrop-blur-2xl cursor-pointer">
+    <div class="2xl:w-[126px] 2xl:h-[126px] w-[110px] h-[110px] aspect-square rounded-full absolute border border-[rgba(184,184,184,0.5)] bg-[rgb(0,0,0,0.15)] backdrop-blur-2xl cursor-pointer">
         <svg width="50" height="58" viewBox="0 0 50 58" class="w-[46%] h-[46%] absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-[50%]" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M0.182074 0.908953L49.4279 29.341L0.182073 57.7731L0.182074 0.908953Z"

@@ -1,9 +1,25 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const props = defineProps({
+    width: {
+        type: Number,
+        default: 420
+    }
+})
+
+const ratio = (420 / 225)
+const height = computed(() => props.width / ratio)
+const idClipPath = crypto.randomUUID()
+</script>
+
+
 <template>
     <div
-        class="w-[420px] h-[225px] flex items-center justify-center relative bg-white/10 backdrop-blur-3xl isolate"
-        :style="{ clipPath: `url(#${idClipPath})` }">
+        class="w-[419px] h-[225px] flex items-center justify-center relative bg-[rgb(255_255_255/0.08)] backdrop-blur-3xl isolate"
+        :style="{width: width - 1 + 'px', height: height + 'px', clipPath: `url(#${idClipPath})` }">
         <slot />
-        <svg width="420" height="225" viewBox="0 0 420 225" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 pointer-events-none">
+        <svg width="420" height="225" viewBox="0 0 420 225" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 pointer-events-none" :style="{width: width + 'px', height: height + 'px' }">
             <circle
                 cx="3.43416"
                 cy="3.43416"
@@ -46,15 +62,11 @@
             </defs>
         </svg>
         <!-- ClipPath svg -->
-        <svg width="0" height="0" viewBox="0 0 420 225">
-            <clipPath :id="idClipPath">
-                <path
-                    d="M92.91 0H10C4.47715 0 0 4.47716 0 10V206.461C0 211.984 4.47714 216.461 9.99999 216.461H277.024C279.46 216.461 281.811 217.35 283.638 218.961L287.652 222.5C289.478 224.111 291.83 225 294.266 225H408.373C414.492 225 419.176 219.554 418.261 213.504L388.602 17.4699C387.862 12.5804 383.659 8.96585 378.714 8.96585H110.43C107.911 8.96585 105.485 8.01499 103.636 6.30337L99.7042 2.66248C97.8557 0.950858 95.4293 0 92.91 0Z" />
+        <svg width="0" height="0">
+            <clipPath :id="idClipPath" clipPathUnits="objectBoundingBox">
+                <path d="M0.222,0 H0.024 C0.011,0,0,0.02,0,0.044 V0.918 C0,0.942,0.011,0.962,0.024,0.962 H0.662 C0.668,0.962,0.674,0.966,0.678,0.973 L0.688,0.989 C0.692,0.996,0.698,1,0.703,1 H0.976 C0.991,1,1,0.976,1,0.949 L0.929,0.078 C0.927,0.056,0.917,0.04,0.905,0.04 H0.264 C0.258,0.04,0.252,0.036,0.248,0.028 L0.238,0.012 C0.234,0.004,0.228,0,0.222,0"></path>
             </clipPath>
         </svg>
         <!--  -->
     </div>
 </template>
-<script setup lang="ts">
-const idClipPath = crypto.randomUUID()
-</script>

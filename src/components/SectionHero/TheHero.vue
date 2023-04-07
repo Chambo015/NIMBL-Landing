@@ -4,19 +4,21 @@ import TheLeftCol from './TheLeftCol.vue';
 import ThePlayIcon from './ThePlayIcon.vue';
 import TheRightCol from './TheRightCol.vue';
 
+
+
 </script>
 
 <template>
-    <section class="min-h-screen pt-[160px] overflow-hidden relative">
-        <div class="container">
-            <h1 class="font-['Rollbox'] font-extrabold uppercase text-[80px] text-center leading-tight">
+    <section class="sm:min-h-screen pt-[160px] overflow-hidden relative">
+        <div class="container ">
+            <h1 class="font-['Rollbox'] font-extrabold uppercase 2xl:text-[80px] lg:text-7xl md:text-5xl sm:text-[42px] text-3xl text-center leading-tight">
                 <span class="bg-hero-text-gradient bg-clip-text text-transparent block">DECENTRALIZED</span>
                 SOCIAL PLATFORM
             </h1>
-            <div class="platform flex justify-between items-center px-6 [perspective: 800px]">
+            <div class="platform xl:left-0 left-[50%] xl:translate-x-0 -translate-x-1/2 xl:w-[95%] w-[170%] flex justify-between items-center xl:px-6 bg-[length:100%] [perspective: 800px] lg:aspect-[1.1975/1] md:aspect-[1.2/1] aspect-[1.18/1]">
                 <ThePlayIcon class="absolute top-[40%] left-[50%] -translate-x-[50%] " />
-                <TheLeftCol />
-                <TheRightCol />
+                <TheLeftCol class="hidden xl:block" />
+                <TheRightCol class="hidden xl:block" />
                 <TheButtonHero />
             </div>
         </div>
@@ -25,14 +27,12 @@ import TheRightCol from './TheRightCol.vue';
 
 <style scoped lang="scss">
     .platform {
-        width: 95%;
         position: relative;
-        aspect-ratio: 1.1975 / 1;
         margin-left: auto;
         margin-right: auto;
         margin-top: -7%;
         background-image: url('/platform-min.jpg');
-        background-size: 100%;
+        background-position: center;
         background-repeat: no-repeat;
         mix-blend-mode: lighten;
     }

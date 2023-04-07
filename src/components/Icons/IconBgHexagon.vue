@@ -6,8 +6,6 @@
 
 <style scoped>
 .hexagon {
-  width: 48px;
-  height: 60px;
   background: rgb(255,255,255,.06);
   position: relative;
   display: flex;
