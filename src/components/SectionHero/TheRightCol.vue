@@ -4,6 +4,7 @@ import channelTokensImg from '@/assets/channel-tokens.png'
 import cardNimblPremiumImg from '@/assets/card-nimbl-premium.png'
 import platformListImg from '@/assets/platform-list.png'
 import { UseMatchMedia } from '@/hooks/UseMatchMedia';
+import { ref } from 'vue';
 
 const [widthRightCard] = UseMatchMedia({
     '3xl': 420,
@@ -11,10 +12,15 @@ const [widthRightCard] = UseMatchMedia({
     xl: 345,
     lg: 900
 })
+
+const targetEl = ref(null)
+defineExpose({
+    targetEl
+})
 </script>
 
 <template>
-    <div class="2xl:space-y-[64px] space-y-[52px]">
+    <div ref="targetEl" class="2xl:space-y-[64px] space-y-[52px]">
         <TheRightColCard :width="widthRightCard">
             <img
                 :src="channelTokensImg"

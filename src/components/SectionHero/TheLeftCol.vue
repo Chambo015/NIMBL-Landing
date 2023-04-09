@@ -4,6 +4,7 @@ import badgesImg from '@/assets/badges.png'
 import musicImg from '@/assets/music.png'
 import nimblImg from '@/assets/nimbl-pfps.png'
 import { UseMatchMedia } from '@/hooks/UseMatchMedia';
+import { ref } from 'vue';
 
 const [widthLeftCard] = UseMatchMedia({
     '3xl': 420,
@@ -11,10 +12,14 @@ const [widthLeftCard] = UseMatchMedia({
     xl: 345,
     lg: 900
 })
+const targetEl = ref(null)
+defineExpose({
+    targetEl
+})
 </script>
 
 <template>
-    <div class="2xl:space-y-[64px] space-y-[52px]">
+    <div ref="targetEl" class="2xl:space-y-[64px] space-y-[52px] relative z-50">
         <TheLeftColCard :width="widthLeftCard">
             <img
                 :src="badgesImg"
