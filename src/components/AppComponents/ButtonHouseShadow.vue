@@ -4,10 +4,10 @@ import imgSteel from '@/assets/steel.jpg'
 </script>
 
 <template>
-    <button class="w-[365px] h-[55px] bg-btn-steel rounded-md relative overflow-hidden shadow-inner shadow-[#6E0D99]">
+    <button class="md:w-[365px] md:h-[55px] sm:w-[260px] sm:h-[50px] w-[200px] h-[40px] bg-btn-steel rounded-md relative overflow-hidden shadow-inner shadow-[#6E0D99]">
         <div class="absolute -inset-2 mix-blend-overlay z-10" :style="{background: `url(${imgSteel}) `}"></div>
-        <div class="absolute border-[7px] border-[#CA12F6] rounded-md blur-sm z-20 border_blur"></div>
-        <span class="font-['Rollbox'] font-extrabold uppercase text-lg relative z-50">house of shadows</span>
+        <div class="absolute md:border-[7px] border-2 border-[#CA12F6] rounded-md blur-sm z-20 border_blur"></div>
+        <span class="font-['Rollbox'] font-extrabold uppercase md:text-lg sm:text-sm text-xs relative z-50">house of shadows</span>
     </button>
 </template>
 
@@ -33,8 +33,8 @@ button {
         left: 0;
         background: url('/swords.png') center / 100% 100%;
         top: 50%;
-        width: 150px;
-        height: 150px;
+        width: 40%;
+        aspect-ratio: 1/1;
         transform: translateY(-41%) translateX(-40%);
         transition: transform 0.3s ease-in-out;
         z-index: 30;
@@ -45,8 +45,8 @@ button {
         right: 0;
         background: url('/swords.png') center / 100% 100%;
         top: 50%;
-        width: 150px;
-        height: 150px;
+        width: 40%;
+        aspect-ratio: 1/1;
         transform: translateY(-41%) translateX(40%) scale(-1, 1);
         transition: transform 0.3s ease-in-out;
         z-index: 30;

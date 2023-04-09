@@ -15,7 +15,7 @@ const idClipPath = crypto.randomUUID()
 
 <template>
     <div
-        class="relative isolate flex h-[335px] w-[725px] items-center justify-center bg-[rgb(255_255_255/0.05)] backdrop-blur-3xl"
+        class="relative isolate flex ] items-center justify-center bg-[rgb(255_255_255/0.05)] backdrop-blur-3xl"
         :style="{ width: width + 'px', height: height + 'px', clipPath: `url(#${idClipPath})` }">
         <slot />
         <svg

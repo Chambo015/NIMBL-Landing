@@ -5,10 +5,10 @@ import imgSteel from '@/assets/steel-big.jpg'
 
 <template>
     <button
-        class="w-[37%]  bg-btn-steel-hero flex justify-center items-center absolute backdrop-blur-3xl bottom-[6%]  left-[31.8%] border-white/10 border-t rounded-lg p-3 overflow-hidden isolate">
+        class="sm:w-[37%] w-[50%] bg-btn-steel-hero flex justify-center items-center absolute backdrop-blur-3xl sm:bottom-[6%] bottom-[2%] left-[25%] sm:left-[31.8%] border-white/10 border-t rounded-lg p-3 overflow-hidden isolate">
         <div class="absolute -inset-2 mix-blend-overlay z-50 opacity-100 bg-[auto_100%] bg-no-repeat" :style="{backgroundImage: `url(${imgSteel})`}"></div>
         <div class="absolute md:border-[7px] border-4 border-[#CA12F6] rounded-md blur-sm z-20 sm:inset-x-3 inset-x-2 top-2 bottom-5 border_blur duration-200"></div>
-        <span class="font-['Rollbox'] absolute font-extrabold uppercase 2xl:text-2xl xl:text-lg lg:text-2xl md:text-lg sm:text-base text-xs z-50">open V0.04 - <br class="sm:hidden"/>prototype</span>
+        <span class="font-['Rollbox'] absolute font-extrabold uppercase 2xl:text-2xl xl:text-lg lg:text-2xl md:text-lg sm:text-base text-sm z-50">open V0.04 - prototype</span>
     </button>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
-    <section class="text-white text-3xl flex w-screen overflow-hidden -mt-2" :style="{ backgroundColor: bgColor }">
-        <div class="whitespace-nowrap inner-line relative py-4 [padding-inline-start:20px]" :style="{ backgroundColor: bgColor }">
+    <section class="text-white md:text-3xl text-sm flex w-screen overflow-hidden -mt-2" :style="{ backgroundColor: bgColor }">
+        <div class="whitespace-nowrap inner-line relative md:py-4 py-2 [padding-inline-start:20px]" :style="{ backgroundColor: bgColor }">
             {{ text }}
             {{ text }}
             {{ text }}
         </div>
-        <div  class="whitespace-nowrap inner-line relative py-4 ml-1" :style="{ backgroundColor: bgColor }">
+        <div  class="whitespace-nowrap inner-line relative md:py-4 py-2 ml-1" :style="{ backgroundColor: bgColor }">
             {{ text }}
             {{ text }}
             {{ text }}

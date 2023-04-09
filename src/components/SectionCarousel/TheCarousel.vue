@@ -8,29 +8,46 @@ import badgesImg from '@/assets/badges.png'
 import musicImg from '@/assets/music.png'
 import nimblImg from '@/assets/nimbl-pfps.png'
 import { computed, ref } from 'vue'
+import { UseMatchMedia } from '@/hooks/UseMatchMedia'
 
+const [spaceBetweenCard] = UseMatchMedia({
+    lg: 40,
+    md: 30,
+    sm: 30,
+    mobile: 20
+})
+
+/* Slider Keen */
 const current = ref(0)
 const [container, slider] = useKeenSlider({
     mode: 'snap',
     slides: {
         origin: "center",
         perView: 'auto',
-        spacing: 40
+        spacing: spaceBetweenCard.value
     },
     initial: current.value,
     slideChanged: (s) => {
         current.value = s.track.details.rel
     }
 })
-
 const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.details.slides.length).keys()] : []))
+/* *** */
+
+
+const [widthCard] = UseMatchMedia({
+    lg: 725,
+    md: 650,
+    sm: 490,
+    mobile: 365
+})
 </script>
 
 <template>
-    <section class="container pt-44">
+    <section class="container md:pt-44 pt-16">
         <div ref="container" class="keen-slider">
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="badgesImg"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
@@ -41,8 +58,8 @@ const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.de
                     </div>
                 </TheCarouselCard>
             </div>
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide ">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="channelTokensImg"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
@@ -53,8 +70,8 @@ const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.de
                     </div>
                 </TheCarouselCard>
             </div>
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide ">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="musicImg"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
@@ -65,20 +82,20 @@ const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.de
                     </div>
                 </TheCarouselCard>
             </div>
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide ">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="cardNimblPremiumImg"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
                         alt="cardNimblPremiumImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
                         <p class="title_card">04</p>
-                        <p class="w-min text-[40px] font-semibold leading-none">Subscriptions</p>
+                        <p class="w-min md:text-[40px] sm:text-2xl text-xl font-semibold leading-none">Subscriptions</p>
                     </div>
                 </TheCarouselCard>
             </div>
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide ">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="nimblImg"
                         class="absolute right-0 bottom-0 h-[95%] translate-x-[10%] translate-y-[0%] -scale-x-100 scale-y-100"
@@ -89,8 +106,8 @@ const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.de
                     </div>
                 </TheCarouselCard>
             </div>
-            <div class="keen-slider__slide min-w-[725px] cursor-grab active:cursor-grabbing">
-                <TheCarouselCard>
+            <div class="keen-slider__slide ">
+                <TheCarouselCard :width="widthCard">
                     <img
                         :src="platformListImg"
                         class="absolute right-0 bottom-0 h-[85%] translate-x-[30%] translate-y-[5%]"
@@ -119,10 +136,14 @@ const dotHelper = computed(() => (slider.value ? [...Array(slider.value.track.de
     overflow: initial !important; /* Слайдер будет виден вне контейнера  */
 }
 
+.keen-slider__slide {
+    @apply lg:min-w-[725px] cursor-grab active:cursor-grabbing md:min-w-[650px] sm:min-w-[490px] min-w-[365px]
+}
+
 .title_card {
-    @apply mb-4 text-3xl text-white/80;
+    @apply mb-4 md:text-3xl text-white/80 sm:text-lg;
 }
 .text_card {
-    @apply w-min text-5xl font-semibold leading-none;
+    @apply w-min md:text-5xl font-semibold leading-none sm:text-3xl text-2xl; 
 }
 </style>

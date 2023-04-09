@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import IconBgHexagon from './Icons/IconBgHexagon.vue';
-import IconClock from './Icons/IconClock.vue';
-import IconDrop from './Icons/IconDrop.vue';
-import IconNetwork from './Icons/IconNetwork.vue';
-import IconStackCoins from './Icons/IconStackCoins.vue'
+import IconBgHexagon from '../Icons/IconBgHexagon.vue';
+import IconClock from '../Icons/IconClock.vue';
+import IconDrop from '../Icons/IconDrop.vue';
+import IconNetwork from '../Icons/IconNetwork.vue';
+import IconStackCoins from '../Icons/IconStackCoins.vue'
 </script>
 
 <template>

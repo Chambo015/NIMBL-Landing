@@ -26,9 +26,9 @@ const [widthCenterCard] = UseMatchMedia({
 </script>
 
 <template>
-    <section class="py-[210px]" id="tokenized">
+    <section class="md:py-[210px] py-[100px]" id="tokenized">
         <div class="container">
-            <h2 class="text-center font-['Rollbox'] xl:text-[50px] lg:text-7xl text-6xl xl:w-auto w-min mx-auto xl:mx-0 font-extrabold uppercase">
+            <h2 class="text-center font-['Rollbox'] xl:text-[50px] lg:text-7xl sm:text-6xl text-3xl xl:w-auto w-min mx-auto xl:mx-0 font-extrabold uppercase">
                 Creator — <span class="bg-hero-text-gradient bg-clip-text text-transparent">tokenized</span>
             </h2>
             <div
@@ -37,7 +37,7 @@ const [widthCenterCard] = UseMatchMedia({
                     <div class="flex xl:w-[80%] w-[67%] gap-6 flex-col items-center xl:flex-row xl:items-stretch xl:pr-4">
                         <IconBgHexagon
                             class="icon">
-                            <IconStackCoins class="h-full w-full" />
+                            <IconStackCoins class=" w-full" />
                         </IconBgHexagon>
                         <p class="description">
                             <span class="text-white/50">Every creator represented as</span> a limited NFT collection
@@ -49,7 +49,7 @@ const [widthCenterCard] = UseMatchMedia({
                     <div class="flex xl:w-[80%] w-[67%] gap-6 flex-col items-center xl:flex-row xl:items-stretch">
                         <IconBgHexagon
                             class="icon">
-                            <IconBox class="h-full w-full" />
+                            <IconBox class=" w-full" />
                         </IconBgHexagon>
                         <p class="description">
                             <span class="text-white/50">Creator collections are</span> available on the marketplace
@@ -61,7 +61,7 @@ const [widthCenterCard] = UseMatchMedia({
                         class="flex xl:w-[80%] w-[67%] justify-end gap-6 flex-col items-center xl:flex-row xl:items-stretch xl:pl-4">
                         <IconBgHexagon
                             class="icon">
-                            <IconFire class="h-full w-full" />
+                            <IconFire class=" w-full" />
                         </IconBgHexagon>
                         <p class="description">
                             <span class="text-white/50">Watch/evaluate/trade channel collections</span> as NFTs
@@ -75,7 +75,7 @@ const [widthCenterCard] = UseMatchMedia({
 
 <style scoped lang="scss">
 .icon {
-    @apply w-[58px] h-[72px] lg:h-[100px] lg:w-[80px] xl:h-[56px] xl:w-[45px] 2xl:h-[62px] 2xl:w-[50px] 3xl:h-[76px] 3xl:w-[62px]
+    @apply min-w-[58px] h-[72px] lg:h-[100px] lg:min-w-[80px] xl:h-[56px] xl:min-w-[45px] 2xl:h-[62px] 2xl:min-w-[50px] 3xl:h-[76px] 3xl:min-w-[62px]
 }
 .description {
     @apply text-center text-3xl lg:text-[40px] xl:text-left xl:text-lg 3xl:text-2xl
