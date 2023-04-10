@@ -1,41 +1,40 @@
 @font-face {
     font-family: 'TT Octosquares';
     src: url('TTOctosquares-Regular.eot');
-    src: local('TT Octosquares'), local('TTOctosquares-Regular'),
+    src: local('TT Octosquares'), 
+        url('TTOctosquares-Regular.woff2') format('woff2'), 
+        url('TTOctosquares-Regular.woff') format('woff'), 
         url('TTOctosquares-Regular.eot?#iefix') format('embedded-opentype'),
-        url('TTOctosquares-Regular.woff2') format('woff2'),
-        url('TTOctosquares-Regular.woff') format('woff'),
         url('TTOctosquares-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'TT Octosquares';
     src: url('TTOctosquares-Medium.eot');
-    src: local('TT Octosquares Medium'), local('TTOctosquares-Medium'),
+    src: url('TTOctosquares-Medium.woff2') format('woff2'), url('TTOctosquares-Medium.woff') format('woff'),
+        local('TT Octosquares Medium'), local('TTOctosquares-Medium'),
         url('TTOctosquares-Medium.eot?#iefix') format('embedded-opentype'),
-        url('TTOctosquares-Medium.woff2') format('woff2'),
-        url('TTOctosquares-Medium.woff') format('woff'),
         url('TTOctosquares-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Ethnocentric';
     src: url('@/fonts/ethnocentric_rg-webfont.woff2') format('woff2'),
-         url('@/fonts/ethnocentric_rg-webfont.woff') format('woff');
+        url('@/fonts/ethnocentric_rg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Rollbox';
     src: url('Rollbox-ExtraBold.eot');
-    src: url('Rollbox-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('Rollbox-ExtraBold.woff2') format('woff2'),
-        url('Rollbox-ExtraBold.woff') format('woff'),
-        url('Rollbox-ExtraBold.ttf') format('truetype');
+    src: url('Rollbox-ExtraBold.eot?#iefix') format('embedded-opentype'), url('Rollbox-ExtraBold.woff2') format('woff2'),
+        url('Rollbox-ExtraBold.woff') format('woff'), url('Rollbox-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
@@ -43,23 +42,25 @@
 @font-face {
     font-family: 'Rollbox';
     src: url('Rollbox-Regular.eot');
-    src: url('Rollbox-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Rollbox-Regular.woff2') format('woff2'),
+    src: url('Rollbox-Regular.woff2') format('woff2'),
         url('Rollbox-Regular.woff') format('woff'),
+        url('Rollbox-Regular.eot?#iefix') format('embedded-opentype'), 
         url('Rollbox-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Rollbox';
     src: url('Rollbox-Bold.eot');
-    src: url('Rollbox-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Rollbox-Bold.woff2') format('woff2'),
+    src: url('Rollbox-Bold.woff2') format('woff2'),
         url('Rollbox-Bold.woff') format('woff'),
+        url('Rollbox-Bold.eot?#iefix') format('embedded-opentype'), 
         url('Rollbox-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -67,8 +68,7 @@
     src: url('TTOctosquares-Bold.eot');
     src: local('TT Octosquares Bold'), local('TTOctosquares-Bold'),
         url('TTOctosquares-Bold.eot?#iefix') format('embedded-opentype'),
-        url('TTOctosquares-Bold.woff2') format('woff2'),
-        url('TTOctosquares-Bold.woff') format('woff'),
+        url('TTOctosquares-Bold.woff2') format('woff2'), url('TTOctosquares-Bold.woff') format('woff'),
         url('TTOctosquares-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -79,8 +79,7 @@
     src: url('TTOctosquares-XBold.eot');
     src: local('TT Octosquares ExtraBold'), local('TTOctosquares-XBold'),
         url('TTOctosquares-XBold.eot?#iefix') format('embedded-opentype'),
-        url('TTOctosquares-XBold.woff2') format('woff2'),
-        url('TTOctosquares-XBold.woff') format('woff'),
+        url('TTOctosquares-XBold.woff2') format('woff2'), url('TTOctosquares-XBold.woff') format('woff'),
         url('TTOctosquares-XBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
@@ -91,8 +90,7 @@
     src: url('TTOctosquares-DBold.eot');
     src: local('TT Octosquares DemiBold'), local('TTOctosquares-DBold'),
         url('TTOctosquares-DBold.eot?#iefix') format('embedded-opentype'),
-        url('TTOctosquares-DBold.woff2') format('woff2'),
-        url('TTOctosquares-DBold.woff') format('woff'),
+        url('TTOctosquares-DBold.woff2') format('woff2'), url('TTOctosquares-DBold.woff') format('woff'),
         url('TTOctosquares-DBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
