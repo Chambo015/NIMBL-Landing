@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TheButtonHero from './TheButtonHero.vue';
 import TheLeftCol from './TheLeftCol.vue';
-import ThePlayIcon from './ThePlayIcon.vue';
+// import ThePlayIcon from './ThePlayIcon.vue';
 import TheRightCol from './TheRightCol.vue';
 
 
@@ -16,7 +16,7 @@ import TheRightCol from './TheRightCol.vue';
                 SOCIAL PLATFORM
             </h1>
             <div class="platform xl:left-0 left-[50%] xl:translate-x-0 -translate-x-1/2 xl:w-[95%] w-[170%] flex justify-between items-center xl:px-6 bg-[length:100%] [perspective: 800px] lg:aspect-[1.1975/1] md:aspect-[1.2/1] aspect-[1.18/1]">
-                <ThePlayIcon class="absolute top-[40%] left-[50%] -translate-x-[50%] " />
+                <!-- <ThePlayIcon class="absolute top-[40%] left-[50%] -translate-x-[50%] " /> -->
                 <TheLeftCol class="hidden xl:block" />
                 <TheRightCol class="hidden xl:block" />
                 <TheButtonHero />
