@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
     <section
         class="relative overflow-x-hidden before:bg-[url('/users-bg-min.png')] before:bg-[length:120%] before:bg-[50%_0%] lg:before:bg-[url('/users-bg-large.png')] lg:before:bg-center"
@@ -21,7 +23,7 @@
     </section>
 </template>
 
-<script setup lang="ts"></script>
+
 
 <style scoped lang="scss">
 section {

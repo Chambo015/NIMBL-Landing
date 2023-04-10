@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { gsap } from 'gsap';
+import { computed, onMounted, ref } from 'vue';
 
 const props = defineProps({
     width: {
@@ -11,13 +12,34 @@ const props = defineProps({
 const ratio = (420 / 225)
 const height = computed(() => props.width / ratio)
 const idClipPath = crypto.randomUUID()
+
+const targetEl = ref(null)
+
+const animation = ref<any>(null)
+onMounted(() => {
+    animation.value = gsap.to(targetEl.value, {
+        duration: 0.3,
+  xPercent: 7
+})
+animation.value.reverse()
+})
+;
+
+const mouseenter = () => {
+    animation.value.play()
+} 
+const mouseleaveHandle = () => {
+    gsap.delayedCall(0.2, () => animation.value.reverse())
+    
+}
+    
 </script>
 
 
 <template>
-    <div
+    <div ref="targetEl"
         class="w-[419px] h-[225px] flex items-center justify-center relative bg-[rgb(255_255_255/0.08)] backdrop-blur-3xl isolate"
-        :style="{width: width - 1 + 'px', height: height + 'px', clipPath: `url(#${idClipPath})` }">
+        :style="{width: width - 1 + 'px', height: height + 'px', clipPath: `url(#${idClipPath})` }" @mouseenter="mouseenter" @mouseleave="mouseleaveHandle">
         <slot />
         <svg width="420" height="225" viewBox="0 0 420 225" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 pointer-events-none" :style="{width: width + 'px', height: height + 'px' }">
             <circle

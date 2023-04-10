@@ -11,6 +11,8 @@ import { useMediaQuery } from '@vueuse/core'
 import TokenizedMiddleCard from './TokenizedMiddleCard.vue'
 import TokenizedTopCard from './TokenizedTopCard.vue'
 import TokenizedBottomCard from './TokenizedBottomCard.vue'
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
 
 const isLargerXL = useMediaQuery('(min-width: 1280px)')
 
@@ -33,17 +35,72 @@ const [widthCenterCard] = UseMatchMedia({
     sm: 555,
     mobile: 360,
 })
+
+const containerEl = ref<HTMLElement| null>(null)
+const titleEl = ref<HTMLElement| null>(null)
+const leftCardEl = ref<null>(null)
+const rightCardEl = ref<null>(null)
+const centerCardEl = ref<null>(null)
+onMounted(() => {
+    gsap.from(titleEl.value, { // from Из этого состояния в обычное
+        scrollTrigger: {
+            trigger: titleEl.value, // trigger по какому элементу отслеживать скролл
+            start: 'center 88%', // start анимации относительно триггер элемент и viewport
+            end: 'bottom center', // конец анимации относительно триггер элемента и viewport
+            scrub: 1.9, // scrub будет анимация идти в обратном порядке
+        },
+        opacity: 0, yPercent: 100,   force3D: true
+
+    });
+    // @ts-ignore
+    gsap.from(leftCardEl.value.targetEl, { // from Из этого состояния в обычное
+        scrollTrigger: {
+            // @ts-ignore
+            trigger: leftCardEl.value.targetEl, // trigger по какому элементу отслеживать скролл
+            start: 'center bottom', // start анимации относительно триггер элемент и viewport
+            end: 'top center', // конец анимации относительно триггер элемента и viewport
+            scrub: 1.9, // scrub будет анимация идти в обратном порядке
+        },
+        opacity: 0, xPercent: -100,   force3D: true
+
+    })
+            // @ts-ignore
+    gsap.from(rightCardEl.value.targetEl, { // from Из этого состояния в обычное
+        scrollTrigger: {
+            // @ts-ignore
+            trigger: rightCardEl.value.targetEl, // trigger по какому элементу отслеживать скролл
+            start: 'center bottom', // start анимации относительно триггер элемент и viewport
+            end: 'top center', // конец анимации относительно триггер элемента и viewport
+            scrub: 1.9, // scrub будет анимация идти в обратном порядке
+        },
+        opacity: 0, xPercent: 100 ,   force3D: true
+
+    })
+    // @ts-ignore
+    gsap.from(centerCardEl.value.targetEl, { // from Из этого состояния в обычное
+        scrollTrigger: {
+            // @ts-ignore
+            trigger: centerCardEl.value.targetEl, // trigger по какому элементу отслеживать скролл
+            start: 'center bottom', // start анимации относительно триггер элемент и viewport
+            end: 'top center', // конец анимации относительно триггер элемента и viewport
+            scrub: 1.9, // scrub будет анимация идти в обратном порядке
+        },
+        opacity: 0, yPercent: 50,   force3D: true
+
+    })
+    
+})
 </script>
 
 <template>
-    <section class="md:py-[210px] py-[100px] sm:py-[150px]" id="tokenized">
+    <section class="md:py-[210px] py-[100px] sm:py-[150px]" id="tokenized" ref="containerEl">
         <div class="container">
-            <h2 class="text-center font-['Rollbox'] xl:text-[50px] lg:text-7xl sm:text-6xl text-3xl xl:w-auto w-min mx-auto xl:mx-0 font-extrabold uppercase">
+            <h2 ref="titleEl" class="text-center font-['Rollbox'] xl:text-[50px] lg:text-7xl sm:text-6xl text-3xl xl:w-auto w-min mx-auto xl:mx-0 font-extrabold uppercase">
                 Creator — <span class="bg-hero-text-gradient bg-clip-text text-transparent">tokenized</span>
             </h2>
             <div
                 class="flex items-center justify-between flex-col gap-6 sm:gap-16 xl:mt-[66px] mt-8 sm:mt-[80px] xl:flex-row xl:gap-0 lg:mt-[90px]">
-                <component :is="isLargerXL ? TokenizedLeftCard : TokenizedTopCard"  class="flex-shrink-0" :width="widthLeftCard">
+                <component ref="leftCardEl" :is="isLargerXL ? TokenizedLeftCard : TokenizedTopCard"  class="flex-shrink-0" :width="widthLeftCard">
                     <div class="flex xl:w-[80%] w-[67%] gap-2 sm:gap-6 flex-col items-center xl:flex-row xl:items-stretch xl:pr-4">
                         <IconBgHexagon
                             class="icon">
@@ -55,7 +112,7 @@ const [widthCenterCard] = UseMatchMedia({
                     </div>
                 </component>
                 <!--  xl:order-none lg:order-first -->
-                <component :is="isLargerXL ? TokenizedCenterCard : TokenizedMiddleCard" class="flex-shrink-0" :width="widthCenterCard">
+                <component ref="centerCardEl" :is="isLargerXL ? TokenizedCenterCard : TokenizedMiddleCard" class="flex-shrink-0" :width="widthCenterCard">
                     <div class="flex xl:w-[80%] w-[67%] gap-2 sm:gap-6 flex-col items-center xl:flex-row xl:items-stretch">
                         <IconBgHexagon
                             class="icon">
@@ -66,7 +123,7 @@ const [widthCenterCard] = UseMatchMedia({
                         </p>
                     </div>
                 </component>
-                <component :is="isLargerXL ? TokenizedRightCard : TokenizedBottomCard" class="flex-shrink-0" :width="widthLeftCard">
+                <component ref="rightCardEl" :is="isLargerXL ? TokenizedRightCard : TokenizedBottomCard" class="flex-shrink-0" :width="widthLeftCard">
                     <div
                         class="flex xl:w-[80%] w-[67%] justify-end gap-2 sm:gap-6 flex-col items-center xl:flex-row xl:items-stretch xl:pl-4">
                         <IconBgHexagon

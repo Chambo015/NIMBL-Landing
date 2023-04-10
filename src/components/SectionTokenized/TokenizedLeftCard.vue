@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps({
     width: {
@@ -10,12 +10,16 @@ const props = defineProps({
 
 const ratio = (530 / 291)
 const height = computed(() => props.width / ratio)
-
 const idClipPath = crypto.randomUUID()
+
+const targetEl = ref(null)
+defineExpose({
+    targetEl
+})
 </script>
 
 <template>
-    <div
+    <div ref="targetEl"
         class=" flex items-center justify-center relative bg-white/5 backdrop-blur-3xl isolate" :style="{width: width + 'px', height: height + 'px', clipPath: `url(#${idClipPath})`}">
         <slot />
         <svg

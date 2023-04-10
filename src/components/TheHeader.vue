@@ -7,11 +7,10 @@ const header =  ref<HTMLElement | null>(null);
 
 onMounted(() => {
   gsap.from(header.value, {
-    delay: 0.5,
+    delay: 1.5,
     duration: 1,
     y: -100,
     autoAlpha: 0,
-    ease: 'power3.out',
   });
   
 })

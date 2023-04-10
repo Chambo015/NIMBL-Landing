@@ -7,31 +7,34 @@ import TheRightCol from './TheRightCol.vue';
 import { gsap } from "gsap";
 
 
-
-const refTitle = ref(null)
-const refPlatform = ref(null)
-const refLeftCol = ref(null)
-const refRightCol = ref(null)
-const refPlayIcon = ref(null)
+const refTitle = ref<HTMLElement | null>(null)
+const refPlatform = ref<HTMLElement | null>(null)
+const refLeftCol = ref<HTMLElement | null>(null)
+const refRightCol = ref<HTMLElement | null>(null)
+const refPlayIcon = ref<HTMLElement | null>(null)
+const refButton = ref<HTMLElement | null>(null)
 
 onMounted(() => {
     const tl = gsap.timeline(); 
-    tl.from(refTitle.value, { duration: 0.8, yPercent: 100, opacity: 0})
+    tl.fromTo(refTitle.value, { yPercent: 100, autoAlpha: 0}, {delay: 1,  duration: 1, yPercent: 0, autoAlpha: 1})
     // @ts-ignore
-    tl.from(refLeftCol.value?.targetEl.children, { duration: 1.5, xPercent: -50, opacity: 0 , stagger: 0.2 , ease: "elastic.out(1, 0.75)" }, )
+    tl.from(refLeftCol.value?.targetEl.children, { duration: 1.5, xPercent: -50, autoAlpha : 0 , stagger: 0.2 , ease: "elastic.out(1, 0.75)", force3D: true })
     // @ts-ignore
-    tl.from(refRightCol.value?.targetEl.children, { duration: 1.5, xPercent: 50, opacity: 0 , stagger: 0.2, ease: "elastic.out(1, 0.75)"}, '<') // '<' вставляем в начало предыдущей анимации
-    tl.to(refPlatform.value, { duration: 2, '--pseudoOpacity': 0 }, "<0.5") // '<0.5' вставляем в начало предыдущей анимации c задержкой 0,5 сек
+    tl.from(refRightCol.value?.targetEl.children, { duration: 1.5, xPercent: 50, autoAlpha: 0 , stagger: 0.2, ease: "elastic.out(1, 0.75)", force3D: true}, '<') // '<' вставляем в начало предыдущей анимации
+    tl.to(refPlatform.value, { duration: 2, '--pseudoOpacity': 0,  force3D: true
+}, "<0.5") // '<0.5' вставляем в начало предыдущей анимации c задержкой 0,5 сек
     // @ts-ignore
     tl.from(refPlayIcon.value.targetEl, { duration: 1, scale: 0,  ease: "back.out(1.7)"}, "<") // '<0.5' вставляем в начало предыдущей анимации c задержкой 0,5 сек
+    // @ts-ignore
+    tl.fromTo(refButton.value.targetEl, { autoAlpha: 0}, { duration: 1, autoAlpha: 1}, "<0.5")
 })
 
 
 </script>
 
 <template>
-    <section class="sm:min-h-screen md:pt-[160px] pt-[110px] overflow-hidden relative">
-        <div class="container ">
+    <section class=" md:pt-[160px] pt-[110px] overflow-hidden relative">
+        <div class="container">
             <h1 ref="refTitle" class="font-['Rollbox'] relative z-50 w-[102%] sm:w-full font-extrabold uppercase 2xl:text-[80px] lg:text-7xl md:text-5xl sm:text-[42px] text-3xl text-center leading-tight">
                 <span class="bg-hero-text-gradient bg-clip-text text-transparent block">DECENTRALIZED</span>
                 SOCIAL PLATFORM
@@ -40,7 +43,7 @@ onMounted(() => {
                 <ThePlayIcon ref="refPlayIcon" class="absolute top-[40%] left-[50%] -translate-x-[50%] " />
                 <TheLeftCol ref="refLeftCol" class="hidden xl:block" />
                 <TheRightCol ref="refRightCol" class="hidden xl:block" />
-                <TheButtonHero />
+                <TheButtonHero ref="refButton" />
             </div>
         </div>
     </section>
@@ -48,7 +51,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
     .platform {
-        --pseudoOpacity: 1
+        --pseudoOpacity: 1;
         position: relative;
         margin-left: auto;
         margin-right: auto;

@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import imgSteel from '@/assets/steel-big.jpg'
-/* <button class="w-[37%] h-[130px] bg-white/10 flex justify-center items-center absolute backdrop-blur-3xl bottom-[6%] left-[31.8%] border-white/10 border-t rounded-lg p-3 overflow-hidden"> */
+const targetEl = ref(null)
+defineExpose({
+    targetEl
+})
 </script>
 
 <template>
-    <button
+    <button ref="targetEl"
         class="sm:w-[37%] w-[50%] bg-btn-steel-hero flex justify-center items-center absolute backdrop-blur-3xl sm:bottom-[6%] bottom-[2%] left-[25%] sm:left-[31.8%] border-white/10 border-t rounded-lg p-3 overflow-hidden isolate">
         <div class="absolute -inset-2 mix-blend-overlay z-50 opacity-100 bg-[auto_100%] bg-no-repeat" :style="{backgroundImage: `url(${imgSteel})`}"></div>
         <div class="absolute md:border-[7px] border-4 border-[#CA12F6] rounded-md blur-sm z-20 sm:inset-x-3 inset-x-2 top-2 bottom-5 border_blur duration-200"></div>
