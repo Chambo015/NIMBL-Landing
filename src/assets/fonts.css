@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'TT Octosquares';
+    src: local('TT Octosquares'), 
+        url('/fonts/TTOctosquares-Regular.woff2') format('woff2'), 
+        url('/fonts/TTOctosquares-Regular.woff') format('woff'), 
+        url('/fonts/TTOctosquares-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: local('TT Octosquares'), local('TTOctosquares-Medium'), 
+        url('/fonts/TTOctosquares-Medium.woff2') format('woff2'), 
+        url('/fonts/TTOctosquares-Medium.woff') format('woff'),
+        url('/fonts/TTOctosquares-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: local('ethnocentric'),
+        url('/fonts/ethnocentric_rg-webfont.woff2') format('woff2'),
+        url('/fonts/ethnocentric_rg-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Rollbox';
+    src: local('Rollbox'),
+        url('/fonts/Rollbox-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Rollbox-ExtraBold.woff') format('woff'), 
+        url('/fonts/Rollbox-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Rollbox';
+    src: local('Rollbox'),
+        url('/fonts/Rollbox-Regular.woff2') format('woff2'),
+        url('/fonts/Rollbox-Regular.woff') format('woff'),
+        url('/fonts/Rollbox-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Rollbox';
+    src: local('Rollbox-Bold'),
+        url('/fonts/Rollbox-Bold.woff2') format('woff2'),
+        url('/fonts/Rollbox-Bold.woff') format('woff'),
+        url('/fonts/Rollbox-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: local('TT Octosquares Bold'), local('TTOctosquares-Bold'),
+        url('/fonts/TTOctosquares-Bold.woff2') format('woff2'), 
+        url('/fonts/TTOctosquares-Bold.woff') format('woff'),
+        url('/fonts/TTOctosquares-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: local('TT Octosquares ExtraBold'), local('TTOctosquares-XBold'),
+        url('/fonts/TTOctosquares-XBold.woff2') format('woff2'), 
+        url('/fonts/TTOctosquares-XBold.woff') format('woff'),
+        url('/fonts/TTOctosquares-XBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'TT Octosquares';
+    src: local('TT Octosquares DemiBold'), local('TTOctosquares-DBold'),
+        url('/fonts/TTOctosquares-DBold.woff2') format('woff2'), 
+        url('/fonts/TTOctosquares-DBold.woff') format('woff'),
+        url('/fonts/TTOctosquares-DBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+}
