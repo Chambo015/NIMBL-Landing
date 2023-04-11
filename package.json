@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "web-build": "run-p type-check build-only",
+    "git-build": "run-p type-check dev-only",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "vite build --base=/",
+    "dev-only": "vite build --base=/NIMBL-Landing/",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
