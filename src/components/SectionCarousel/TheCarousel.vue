@@ -113,11 +113,11 @@ const [widthCard] = UseMatchMedia({
                 </TheCarouselCard>
             </div>
         </div>
-        <div v-if="slider" class="flex justify-center items-center gap-3 h-5 mt-4">
+        <div v-if="slider" class="flex justify-center items-center gap-3 sm:h-5 h-4 mt-4">
             <button
                 v-for="(_slide, idx) in dotHelper"
                 @click="slider?.moveToIdx(idx)"
-                :class="['rounded-full transition-all', current === idx ? 'bg-[#3672FE] h-5 w-5' : 'w-3 h-3 bg-white/30']"
+                :class="['rounded-full transition-all', current === idx ? 'bg-[#3672FE] sm:h-5 sm:w-5 h-4 w-4' : 'sm:w-3 w-2 h-2 sm:h-3 bg-white/30']"
                 :key="idx"></button>
         </div>
     </section>

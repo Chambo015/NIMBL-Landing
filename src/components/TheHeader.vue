@@ -26,9 +26,3 @@ onMounted(() => {
         </div>
     </header>
 </template>
-
-
-
-<style scoped>
-
-</style>
