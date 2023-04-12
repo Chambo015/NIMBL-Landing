@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import TheLeftColCard from './TheLeftColCard.vue'
-import badgesImg from '@/assets/badges.png'
-import musicImg from '@/assets/music.png'
-import nimblImg from '@/assets/nimbl-pfps.png'
 import { UseMatchMedia } from '@/hooks/UseMatchMedia';
 
 const [widthLeftCard] = UseMatchMedia({
@@ -17,8 +14,9 @@ const [widthLeftCard] = UseMatchMedia({
     <div class="2xl:space-y-[64px] space-y-[52px]">
         <TheLeftColCard :width="widthLeftCard">
             <img
-                :src="badgesImg"
-                class="h-full absolute left-0 bottom-0 -translate-x-[20%] translate-y-[20%]"
+                src="/card/badges-sm.png"
+                data-src="/card/badges.png"
+                class="lazyload h-full absolute left-0 bottom-0 -translate-x-[20%] translate-y-[20%]"
                 alt="badgesImg"/>
             <div class="absolute left-[55%] top-1/2 -translate-y-1/2">
                 <p class="title_card">01</p>
@@ -27,8 +25,9 @@ const [widthLeftCard] = UseMatchMedia({
         </TheLeftColCard>
         <TheLeftColCard :width="widthLeftCard">
             <img
-                :src="musicImg"
-                class="h-full absolute left-0 bottom-0 -translate-x-[15%] translate-y-[15%]"
+                src="/card/music-sm.png"
+                data-src="/card/music.png"
+                class="lazyload h-full absolute left-0 bottom-0 -translate-x-[15%] translate-y-[15%]"
                 alt="musicImg" />
             <div class="absolute left-[55%] top-1/2 -translate-y-1/2">
                 <p class="title_card">03</p>
@@ -36,7 +35,7 @@ const [widthLeftCard] = UseMatchMedia({
             </div>
         </TheLeftColCard>
         <TheLeftColCard :width="widthLeftCard">
-            <img :src="nimblImg" class="h-[90%] absolute left-0 bottom-0 -translate-x-[25%]" alt="nimblImg"/>
+            <img src="/card/nimbl-pfps-sm.png" data-src="/card/nimbl-pfps.png" class="lazyload h-[90%] absolute left-0 bottom-0 -translate-x-[25%]" alt="nimblImg"/>
             <div class="absolute left-[55%] top-1/2 -translate-y-1/2">
                 <p class="title_card">05</p>
                 <p class="text_card">Nimbl PFPs</p>

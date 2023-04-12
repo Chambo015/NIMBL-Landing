@@ -15,7 +15,7 @@ import TheRightCol from './TheRightCol.vue';
                 <span class="bg-hero-text-gradient bg-clip-text text-transparent block">DECENTRALIZED</span>
                 SOCIAL PLATFORM
             </h1>
-            <div class="platform xl:left-0 left-[50%] xl:translate-x-0 -translate-x-1/2 xl:w-[95%] w-[170%] flex justify-between items-center xl:px-6 bg-[length:100%] [perspective: 800px] lg:aspect-[1.1975/1] md:aspect-[1.2/1] aspect-[1.18/1]">
+            <div data-bgset="/platform.webp [type: image/webp] | /platform.jpg" class="lazyload platform xl:left-0 left-[50%] xl:translate-x-0 -translate-x-1/2 xl:w-[95%] w-[170%] flex justify-between items-center xl:px-6 bg-[length:100%] [perspective: 800px] lg:aspect-[1.1975/1] md:aspect-[1.2/1] aspect-[1.18/1]">
                 <!-- <ThePlayIcon class="absolute top-[40%] left-[50%] -translate-x-[50%] " /> -->
                 <TheLeftCol class="hidden xl:block" />
                 <TheRightCol class="hidden xl:block" />

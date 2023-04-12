@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { useKeenSlider } from 'keen-slider/vue.es'
 import TheCarouselCard from './TheCarouselCard.vue'
-import channelTokensImg from '@/assets/channel-tokens.png'
-import cardNimblPremiumImg from '@/assets/card-nimbl-premium.png'
-import platformListImg from '@/assets/platform-list.png'
-import badgesImg from '@/assets/badges.png'
-import musicImg from '@/assets/music.png'
-import nimblImg from '@/assets/nimbl-pfps.png'
 import { computed, ref } from 'vue'
 import { UseMatchMedia } from '@/hooks/UseMatchMedia'
 
@@ -49,7 +43,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="badgesImg"
+                        src="/card/badges.png"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
                         alt="badgesImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
@@ -61,7 +55,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide ">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="channelTokensImg"
+                    src="/card/channel-tokens.png"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
                         alt="channelTokensImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
@@ -73,7 +67,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide ">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="musicImg"
+                    src="/card/music.png"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
                         alt="musicImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
@@ -85,7 +79,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide ">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="cardNimblPremiumImg"
+                    src="/card/card-nimbl-premium.png"
                         class="absolute right-0 bottom-0 h-full translate-x-[0%] translate-y-[5%]"
                         alt="cardNimblPremiumImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
@@ -97,7 +91,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide ">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="nimblImg"
+                        src="/card/nimbl-pfps.png"
                         class="absolute right-0 bottom-0 h-[95%] translate-x-[10%] translate-y-[0%] -scale-x-100 scale-y-100"
                         alt="nimblImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
@@ -109,7 +103,7 @@ const [widthCard] = UseMatchMedia({
             <div class="keen-slider__slide ">
                 <TheCarouselCard :width="widthCard">
                     <img
-                        :src="platformListImg"
+                        src="/card/platform-list.png"
                         class="absolute right-0 bottom-0 h-[85%] translate-x-[30%] translate-y-[5%]"
                         alt="platformListImg" />
                     <div class="absolute left-[13%] top-1/2 -translate-y-1/2">

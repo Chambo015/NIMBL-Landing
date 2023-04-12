@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import TheRightColCard from './TheRightColCard.vue';
-import channelTokensImg from '@/assets/channel-tokens.png'
-import cardNimblPremiumImg from '@/assets/card-nimbl-premium.png'
-import platformListImg from '@/assets/platform-list.png'
 import { UseMatchMedia } from '@/hooks/UseMatchMedia';
 
 const [widthRightCard] = UseMatchMedia({
@@ -17,8 +14,9 @@ const [widthRightCard] = UseMatchMedia({
     <div class="2xl:space-y-[64px] space-y-[52px]">
         <TheRightColCard :width="widthRightCard">
             <img
-                :src="channelTokensImg"
-                class="h-full absolute right-0 bottom-0 translate-x-[15%] translate-y-[5%]"
+                src="/card/channel-tokens-sm.png"
+                data-src="/card/channel-tokens.png"
+                class="lazyload h-full absolute right-0 bottom-0 translate-x-[15%] translate-y-[5%]"
                 alt="channelTokensImg" />
             <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
                 <p class="title_card">02</p>
@@ -27,8 +25,9 @@ const [widthRightCard] = UseMatchMedia({
         </TheRightColCard>
         <TheRightColCard :width="widthRightCard">
             <img
-                :src="cardNimblPremiumImg"
-                class="h-full absolute right-0 bottom-0 translate-x-[15%] translate-y-[15%]"
+            src="/card/card-nimbl-premium-sm.png"
+                data-src="/card/card-nimbl-premium.png"
+                class="lazyload h-full absolute right-0 bottom-0 translate-x-[15%] translate-y-[15%]"
                 alt="cardNimblPremiumImg" />
             <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
                 <p class="title_card">04</p>
@@ -37,8 +36,9 @@ const [widthRightCard] = UseMatchMedia({
         </TheRightColCard>
         <TheRightColCard :width="widthRightCard">
             <img
-                :src="platformListImg"
-                class="h-[80%] absolute right-0 bottom-0 translate-x-[40%] translate-y-[10%]"
+            src="/card/platform-list-sm.png"
+                data-src="/card/platform-list.png"
+                class="lazyload h-[80%] absolute right-0 bottom-0 translate-x-[40%] translate-y-[10%]"
                 alt="platformListImg" />
             <div class="absolute left-[13%] top-1/2 -translate-y-1/2">
                 <p class="title_card">06</p>
