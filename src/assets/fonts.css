@@ -34,8 +34,7 @@
     font-family: 'Rollbox';
     src: local('Rollbox'),
         url('/fonts/Rollbox-ExtraBold.woff2') format('woff2'),
-        url('/fonts/Rollbox-ExtraBold.woff') format('woff'), 
-        url('/fonts/Rollbox-ExtraBold.ttf') format('truetype');
+        url('/fonts/Rollbox-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
     font-display: auto;
@@ -45,8 +44,7 @@
     font-family: 'Rollbox';
     src: local('Rollbox'),
         url('/fonts/Rollbox-Regular.woff2') format('woff2'),
-        url('/fonts/Rollbox-Regular.woff') format('woff'),
-        url('/fonts/Rollbox-Regular.ttf') format('truetype');
+        url('/fonts/Rollbox-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: auto;
@@ -56,8 +54,7 @@
     font-family: 'Rollbox';
     src: local('Rollbox-Bold'),
         url('/fonts/Rollbox-Bold.woff2') format('woff2'),
-        url('/fonts/Rollbox-Bold.woff') format('woff'),
-        url('/fonts/Rollbox-Bold.ttf') format('truetype');
+        url('/fonts/Rollbox-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: auto;

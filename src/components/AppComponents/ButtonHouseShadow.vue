@@ -4,10 +4,12 @@ import imgSteel from '@/assets/steel.jpg'
 </script>
 
 <template>
-    <button class="md:w-[365px] md:h-[55px] sm:w-[260px] sm:h-[50px] w-[200px] h-[40px] bg-btn-steel rounded-md relative overflow-hidden shadow-inner shadow-[#6E0D99]">
+    <button class="group md:w-[365px] md:h-[55px] sm:w-[260px] sm:h-[50px] w-[200px] h-[40px] bg-btn-steel rounded-md relative overflow-hidden shadow-inner shadow-[#6E0D99]">
         <div class="absolute -inset-2 mix-blend-overlay z-10" :style="{background: `url(${imgSteel}) `}"></div>
         <div class="absolute md:border-[7px] border-2 border-[#CA12F6] rounded-md blur-sm z-20 border_blur"></div>
         <span class="font-['Rollbox'] font-extrabold uppercase md:text-lg sm:text-sm text-xs relative z-50">house of shadows</span>
+        <!-- coming soon -->
+        <div class="absolute inset-0 z-50 group-hover:opacity-100 transition-opacity cursor-not-allowed opacity-0 bg-black/80 font-['Rollbox'] font-extrabold text md:text-lg sm:text-sm text-xs uppercase text-center flex items-center justify-center"><span>coming soon</span></div>
     </button>
 </template>
 
